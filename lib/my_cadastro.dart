@@ -68,10 +68,10 @@ class _MyCadastroState extends State<MyCadastro> {
                       validator: (value) {
                         if (value!.isEmpty) {
                           return ("a Senha não pode ser vazia");
-                        } else if (int.parse(campoSenha.text) < 10) {
+                        } else if (campoSenha.text.length < 3) {
                           //else if(campoRa.text.length<10){
 
-                          return ("a Senha deve ser pelo menos 3 carácteres");
+                          return ("a Senha deve ser pelo menos 3 carcteres");
                         }
 
                         return null;
@@ -92,7 +92,7 @@ class _MyCadastroState extends State<MyCadastro> {
                           return ("Preencher nome do usuário");
                         } else {
                           if (campoNome.text.length < 3) {
-                            return ("o nome precisa ter mais que 3 carácteres");
+                            return ("o nome precisa ter mais que 3 caracteres");
                           }
                         }
                         return null;
